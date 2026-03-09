@@ -16,3 +16,10 @@ function add(a, b, callback){
 
 add(5, 10, happyPrint);
 add(11, 12, sadPrint);
+
+//prints current date
+function printDate(){
+   console.log(new Date().toLocaleTimeString());
+}
+setTimeout(printDate, 2000);      
+setInterval(printDate, 1000);
