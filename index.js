@@ -1,34 +1,35 @@
-let arr = [12, 33, 4, 5, -4, 8, 19, 25];
-                
-//map() creates a new array from the elements of one without changing the old one
-function double(num){
-  return num * 2;
-}
+let person = {
+  // key : value
+  "name": "John",
+  "age": 12
+};
 
-let doubledArr = arr.map(double); 
-console.log(doubledArr);
+//we can print the values of a key in two ways
+console.log(person["age"]);//Using an index
+console.log(person.name);//referencing the key as a property
 
-function isOdd(num){
-  return num%2 !== 0; 
-}
-//Filter takes a test condition and returns only the element which 
-//make the condition true
-let odds = arr.filter(isOdd);
-console.log(odds);
+person["weight"] = 70;
 
-//Returns true or false if any of the elements of the array 
-//meets a specified condition
-function has5Factor(ele){
-  return ele % 5 === 0;
-}
+person.marks = [67, 34, 55, 89];
 
-let hasFiveFactor = arr.some(has5Factor);
-console.log(hasFiveFactor);
+let firstMark = person.marks[0];
 
-function intCompare(a, b){
- return a - b;
-}
+//mixing array and objects
+let people = [
+  person,
+  {
+    name: "Jane",
+    age: 23,
+    marks: [51, 78, 99, 76]
+  }
+];
 
-//sort function must return either 0, +ve, -ve
-let ascending = arr.sort(intCompare)
-console.log(ascending);
+let johnClone = {};//empty object
+
+//copying objects
+Object.assign(johnClone, person);
+
+console.log(johnClone);
+
+
+console.log(people[0].marks[0]);//what is printed?
