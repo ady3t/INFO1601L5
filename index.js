@@ -6,7 +6,7 @@ arr.push(11);//adds item to the end
 
 console.log(arr)//[ -5, 16, 33, 42, 103, 344, 11];
 
-let lastItem == arr.pop();//removes last item
+let lastItem = arr.pop();//removes last item
 
 console.log(lastItem, arr);//11, [ -5, 16, 33, 42, 103, 344]
 
